@@ -8,7 +8,7 @@ let didIOffer;
 let offerIceCandidateArray = []
 let answerIceCandidateArray =[]
 
-const socket = io.connect("https://peervideo-production.up.railway.app:3009", {
+const socket = io.connect("https://peervideo-production.up.railway.app", {
     auth: {
         userName, password
     }
