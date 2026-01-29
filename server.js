@@ -11,8 +11,8 @@ const cert = fs.readFileSync("localhost+3.pem");
 const app = express()
 app.use(express.static("public"))
 
-const expressServer = http.createServer(app)
-
+//const expressServer = https.createServer({key,cert},app)
+const expressServer = https.createServer(app)
 const io =new Server(expressServer, {
     cors: {
         origin: "*"

@@ -9,6 +9,7 @@ let offerIceCandidateArray = []
 let answerIceCandidateArray =[]
 
 const socket = io.connect("https://peervideo-production.up.railway.app", {
+//const socket = io.connect("https://localhost:3009", {
     auth: {
         userName, password
     }
@@ -93,7 +94,7 @@ const createPeerConnection = async (offerObj) => {
 
     peerConnection = new RTCPeerConnection(stunServers);
     remoteStream = new MediaStream()
-   // document.getElementById("remote-video").srcObject = remoteStream
+    document.getElementById("remote-video").srcObject = remoteStream
 
     localStream.getTracks().forEach((track) => {
         peerConnection.addTrack(track, localStream)
