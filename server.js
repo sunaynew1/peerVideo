@@ -12,7 +12,7 @@ const app = express()
 app.use(express.static("public"))
 
 //const expressServer = https.createServer({key,cert},app)
-const expressServer = https.createServer(app)
+const expressServer = http.createServer(app)
 const io =new Server(expressServer, {
     cors: {
         origin: "*"
